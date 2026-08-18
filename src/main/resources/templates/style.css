@@ -615,9 +615,9 @@ body {
 
     background: #102b57;
     color: white;
-    transition: eidth 0.3s ease,min-width 0.3s ease;
+
     position: relative;
-    overflow: hidden;
+    
 
     display: flex;
     flex-direction: column;
