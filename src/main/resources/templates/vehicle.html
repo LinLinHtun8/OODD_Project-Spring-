@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AutoServe - Vehicle Management</title>
+
+    <link rel="stylesheet" href="./css/v.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <!-- Logo -->
+        <div class="logo">
+
+            <div class="logo-box">
+                <svg width="18" height="18"
+                     viewBox="0 0 24 24"
+                     fill="none">
+
+                    <path
+                        d="M6 8H18V18H6V8Z"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"/>
+
+                    <path
+                        d="M9 8V5H15V8"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"/>
+
+                </svg>
+            </div>
+
+            <div class="logo-text">
+                <strong>AutoServe</strong>
+                <span>Management System</span>
+            </div>
+
+            <button class="collapse-btn">‹</button>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="navigation">
+                 <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 10L4.16667 8.33333M4.16667 8.33333L10 2.5L15.8333 8.33333M4.16667 8.33333V16.6667C4.16667 16.8877 4.25446 17.0996 4.41074 17.2559C4.56702 17.4122 4.77899 17.5 5 17.5H7.5M15.8333 8.33333L17.5 10M15.8333 8.33333V16.6667C15.8333 16.8877 15.7455 17.0996 15.5893 17.2559C15.433 17.4122 15.221 17.5 15 17.5H12.5M7.5 17.5C7.72101 17.5 7.93298 17.4122 8.08926 17.2559C8.24554 17.0996 8.33333 16.8877 8.33333 16.6667V13.3333C8.33333 13.1123 8.42113 12.9004 8.57741 12.7441C8.73369 12.5878 8.94565 12.5 9.16667 12.5H10.8333C11.0543 12.5 11.2663 12.5878 11.4226 12.7441C11.5789 12.9004 11.6667 13.1123 11.6667 13.3333V16.6667C11.6667 16.8877 11.7545 17.0996 11.9107 17.2559C12.067 17.4122 12.279 17.5 12.5 17.5M7.5 17.5H12.5" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                 </svg>
+                </span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item ">
+                <span class="nav-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 21V19C16 16.8 14.2 15 12 15H6C3.8 15 2 16.8 2 19V21"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round"/>
+            <circle cx="9" cy="7" r="4"
+                    stroke="currentColor" stroke-width="2"/>
+            <path d="M22 21V19C22 17.2 20.8 15.7 19 15.2"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round"/>
+            <path d="M16 3.2C17.8 3.7 19 5.2 19 7C19 8.8 17.8 10.3 16 10.8"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round"/>
+            </svg>
+                </span>
+                <span class="nav-text">Customers</span>
+                <span class="nav-dot"></span>
+            </a>
+
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">
+                    <svg width="20" height="20" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5H20M8 5C8 6.06087 7.57857 7.07828 6.82843 7.82843C6.07828 8.57857 5.06087 9 4 9C2.93913 9 1.92172 8.57857 1.17157 7.82843C0.421427 7.07828 0 6.06087 0 5M8 5V3C8 2.46957 8.21071 1.96086 8.58579 1.58579C8.96086 1.21071 9.46957 1 10 1H18C18.5304 1 19.0391 1.21071 19.4142 1.58579C19.7893 1.96086 20 2.46957 20 3V5M20 5V15C20 15.5304 19.7893 16.0391 19.4142 16.4142C19.0391 16.7893 18.5304 17 18 17H6C5.46957 17 4.96086 16.7893 4.58579 16.4142C4.21071 16.0391 4 15.5304 4 15V5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="nav-text">Vehicles</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="5" width="16" height="15" rx="2"
+                    stroke="#CAD5E2" stroke-width="1.67"/>
+                <path d="M8 3V7M16 3V7M4 10H20"
+                    stroke="#CAD5E2"
+                    stroke-width="1.67"
+                    stroke-linecap="round"/>
+                </svg>
+                </span>
+                <span class="nav-text">Appointments</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5Z"
+                        stroke="#CAD5E2"
+                        stroke-width="1.67"/>
+                    <path d="M19.4 15A1.7 1.7 0 0 0 19.74 16.88L19.8 16.94L16.94 19.8L16.88 19.74A1.7 1.7 0 0 0 15 19.4A1.7 1.7 0 0 0 14 21H10A1.7 1.7 0 0 0 9 19.4A1.7 1.7 0 0 0 7.12 19.74L7.06 19.8L4.2 16.94L4.26 16.88A1.7 1.7 0 0 0 4.6 15A1.7 1.7 0 0 0 3 14V10A1.7 1.7 0 0 0 4.6 9A1.7 1.7 0 0 0 4.26 7.12L4.2 7.06L7.06 4.2L7.12 4.26A1.7 1.7 0 0 0 9 4.6A1.7 1.7 0 0 0 10 3H14A1.7 1.7 0 0 0 15 4.6A1.7 1.7 0 0 0 16.88 4.26L16.94 4.2L19.8 7.06L19.74 7.12A1.7 1.7 0 0 0 19.4 9A1.7 1.7 0 0 0 21 10V14A1.7 1.7 0 0 0 19.4 15Z"
+                        stroke="#CAD5E2"
+                        stroke-width="1.67"
+                        stroke-linejoin="round"/>
+                </svg>
+                </span>
+                <span class="nav-text">Services</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="7" cy="7" r="3"
+                            stroke="#CAD5E2" stroke-width="1.67"/>
+                    <circle cx="7" cy="17" r="3"
+                            stroke="#CAD5E2" stroke-width="1.67"/>
+                    <path d="M9.5 8.5L20 3M9.5 15.5L20 21M10 12H20"
+                        stroke="#CAD5E2"
+                        stroke-width="1.67"
+                        stroke-linecap="round"/>
+                </svg>
+                </span>
+                <span class="nav-text">Mechanic View</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3Z"
+                        stroke="#CAD5E2"
+                        stroke-width="1.67"
+                        stroke-linejoin="round"/>
+                    <path d="M4 7.5L12 12L20 7.5M12 12V21"
+                        stroke="#CAD5E2"
+                        stroke-width="1.67"
+                        stroke-linejoin="round"/>
+                </svg>
+                </span>
+                <span class="nav-text">Spare Parts</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                     <svg width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 3H14L19 8V20H7C5.895 20 5 19.105 5 18V5C5 3.895 5.895 3 7 3Z"
+                            stroke="#CAD5E2"
+                            stroke-width="1.67"
+                            stroke-linejoin="round"/>
+                        <path d="M14 3V8H19M9 13H16M9 16H14"
+                            stroke="#CAD5E2"
+                            stroke-width="1.67"
+                            stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="nav-text">Invoices</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                     <svg width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="6" width="18" height="12" rx="2"
+                            stroke="#CAD5E2"
+                            stroke-width="1.67"/>
+                        <path d="M3 10H21"
+                            stroke="#CAD5E2"
+                            stroke-width="1.67"/>
+                        <path d="M8 14H8.01M12 14H12.01"
+                            stroke="#CAD5E2"
+                            stroke-width="2"
+                            stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="nav-text">Payments</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                     <svg width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="12" width="4" height="8" rx="1"
+                            stroke="#CAD5E2" stroke-width="1.67"/>
+                        <rect x="10" y="8" width="4" height="12" rx="1"
+                            stroke="#CAD5E2" stroke-width="1.67"/>
+                        <rect x="16" y="4" width="4" height="16" rx="1"
+                            stroke="#CAD5E2" stroke-width="1.67"/>
+                    </svg>
+                </span>
+                <span class="nav-text">Reports</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                     <svg width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="9" cy="8" r="3"
+                                stroke="#CAD5E2"
+                                stroke-width="1.67"/>
+                        <path d="M3 20C3 16.686 5.686 14 9 14C12.314 14 15 16.686 15 20"
+                            stroke="#CAD5E2"
+                            stroke-width="1.67"
+                            stroke-linecap="round"/>
+                        <circle cx="16.5" cy="9" r="2.5"
+                                stroke="#CAD5E2"
+                                stroke-width="1.67"/>
+                        <path d="M15 14.5C16.1 14.18 17.27 14 18.5 14C20.43 14 22 15.57 22 17.5"
+                            stroke="#CAD5E2"
+                            stroke-width="1.67"
+                            stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="nav-text">User Management</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5Z"
+                        stroke="#CAD5E2"
+                        stroke-width="1.67"/>
+                    <path d="M19.4 15A1.7 1.7 0 0 0 19.74 16.88L19.8 16.94L16.94 19.8L16.88 19.74A1.7 1.7 0 0 0 15 19.4A1.7 1.7 0 0 0 14 21H10A1.7 1.7 0 0 0 9 19.4A1.7 1.7 0 0 0 7.12 19.74L7.06 19.8L4.2 16.94L4.26 16.88A1.7 1.7 0 0 0 4.6 15A1.7 1.7 0 0 0 3 14V10A1.7 1.7 0 0 0 4.6 9A1.7 1.7 0 0 0 4.26 7.12L4.2 7.06L7.06 4.2L7.12 4.26A1.7 1.7 0 0 0 9 4.6A1.7 1.7 0 0 0 10 3H14A1.7 1.7 0 0 0 15 4.6A1.7 1.7 0 0 0 16.88 4.26L16.94 4.2L19.8 7.06L19.74 7.12A1.7 1.7 0 0 0 19.4 9A1.7 1.7 0 0 0 21 10V14A1.7 1.7 0 0 0 19.4 15Z"
+                        stroke="#CAD5E2"
+                        stroke-width="1.67"
+                        stroke-linejoin="round"/>
+                </svg>
+                </span>
+                <span class="nav-text">Settings</span>
+            </a>
+            
+        </nav>
+
+
+        <!-- User -->
+
+        <div class="sidebar-user">
+
+            <div class="avatar">
+                JD
+            </div>
+
+            <div class="user-info">
+                <strong>John Davis</strong>
+                <small>Manager</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="header-title">
+
+                <span>
+                    Wednesday, August 13, 2026
+                </span>
+
+                <strong>
+                    Vehicle Management
+                </strong>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="quick-search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        placeholder="Quick search..."
+                    >
+
+                </div>
+
+
+                <div class="notification">
+                    ♟
+                    <i>4</i>
+                </div>
+
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        JD
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>John Davis</strong>
+                        <small>Manager</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content">
+
+
+            <!-- PAGE TITLE -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h1>
+                        Vehicle Management
+                    </h1>
+
+                    <p>
+                        7 registered vehicles
+                    </p>
+
+                </div>
+
+
+                <div class="heading-buttons">
+
+                    <button class="filter-btn">
+                        Filter
+                    </button>
+
+                    <button
+                        class="add-btn"
+                        onclick="openModal()">
+
+                        + Add Vehicle
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= VEHICLE CARD ================= -->
+
+            <div class="vehicle-card">
+
+
+                <!-- SEARCH -->
+
+                <div class="vehicle-search">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by plate, owner, or brand..."
+                        onkeyup="searchVehicle()"
+                    >
+
+                </div>
+
+
+
+                <!-- TABLE -->
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>VEHICLE ID</th>
+
+                                <th>PLATE NO.</th>
+
+                                <th>BRAND & MODEL</th>
+
+                                <th>YEAR</th>
+
+                                <th>TYPE</th>
+
+                                <th>OWNER</th>
+
+                                <th>STATUS</th>
+
+                                <th>ACTIONS</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="vehicleTable">
+
+
+                            <!-- V-001 -->
+
+                            <tr>
+
+                                <td>V-001</td>
+
+                                <td class="plate">
+                                    ABC&nbsp; 1234
+                                </td>
+
+                                <td class="bold">
+                                    Toyota Camry
+                                </td>
+
+                                <td>2021</td>
+
+                                <td>Sedan</td>
+
+                                <td>Marcus Williams</td>
+
+                                <td>
+                                    <span class="status service">
+                                        In Service
+                                    </span>
+                                </td>
+
+                                <td class="actions">
+
+                                    <button
+                                        title="View">
+                                        ◎
+                                    </button>
+
+                                    <button
+                                        title="Edit">
+                                        ♢
+                                    </button>
+
+                                    <button
+                                        class="delete"
+                                        title="Delete">
+                                        ♧
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- V-002 -->
+
+                            <tr>
+
+                                <td>V-002</td>
+
+                                <td class="plate">
+                                    XYZ&nbsp; 5678
+                                </td>
+
+                                <td class="bold">
+                                    Honda Civic
+                                </td>
+
+                                <td>2020</td>
+
+                                <td>Sedan</td>
+
+                                <td>Sarah Johnson</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                                <td class="actions">
+
+                                    <button>◎</button>
+                                    <button>♢</button>
+                                    <button class="delete">♧</button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- V-003 -->
+
+                            <tr>
+
+                                <td>V-003</td>
+
+                                <td class="plate">
+                                    LMN&nbsp; 9012
+                                </td>
+
+                                <td class="bold">
+                                    Ford F-150
+                                </td>
+
+                                <td>2019</td>
+
+                                <td>Truck</td>
+
+                                <td>Robert Kim</td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td class="actions">
+
+                                    <button>◎</button>
+                                    <button>♢</button>
+                                    <button class="delete">♧</button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- V-004 -->
+
+                            <tr>
+
+                                <td>V-004</td>
+
+                                <td class="plate">
+                                    DEF&nbsp; 3456
+                                </td>
+
+                                <td class="bold">
+                                    BMW 3 Series
+                                </td>
+
+                                <td>2022</td>
+
+                                <td>Sedan</td>
+
+                                <td>Emily Chen</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                                <td class="actions">
+
+                                    <button>◎</button>
+                                    <button>♢</button>
+                                    <button class="delete">♧</button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- V-005 -->
+
+                            <tr>
+
+                                <td>V-005</td>
+
+                                <td class="plate">
+                                    GHI&nbsp; 7890
+                                </td>
+
+                                <td class="bold">
+                                    Chevrolet Malibu
+                                </td>
+
+                                <td>2018</td>
+
+                                <td>Sedan</td>
+
+                                <td>David Thompson</td>
+
+                                <td>
+                                    <span class="status service">
+                                        In Service
+                                    </span>
+                                </td>
+
+                                <td class="actions">
+
+                                    <button>◎</button>
+                                    <button>♢</button>
+                                    <button class="delete">♧</button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- V-006 -->
+
+                            <tr>
+
+                                <td>V-006</td>
+
+                                <td class="plate">
+                                    JKL&nbsp; 1234
+                                </td>
+
+                                <td class="bold">
+                                    Nissan Altima
+                                </td>
+
+                                <td>2023</td>
+
+                                <td>Sedan</td>
+
+                                <td>Lisa Martinez</td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td class="actions">
+
+                                    <button>◎</button>
+                                    <button>♢</button>
+                                    <button class="delete">♧</button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- V-007 -->
+
+                            <tr>
+
+                                <td>V-007</td>
+
+                                <td class="plate">
+                                    MNO&nbsp; 5678
+                                </td>
+
+                                <td class="bold">
+                                    Hyundai Tucson
+                                </td>
+
+                                <td>2021</td>
+
+                                <td>SUV</td>
+
+                                <td>James Wilson</td>
+
+                                <td>
+                                    <span class="status completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                                <td class="actions">
+
+                                    <button>◎</button>
+                                    <button>♢</button>
+                                    <button class="delete">♧</button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- TABLE FOOTER -->
+
+                <div class="table-footer">
+
+                    <span>
+                        Showing 7 of 7 vehicles
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- ================= ADD VEHICLE MODAL ================= -->
+
+<div class="modal" id="vehicleModal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <h2>
+                Add Vehicle
+            </h2>
+
+            <button onclick="closeModal()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <label>
+                Plate Number
+            </label>
+
+            <input
+                type="text"
+                placeholder="ABC 1234"
+            >
+
+
+            <label>
+                Brand & Model
+            </label>
+
+            <input
+                type="text"
+                placeholder="Toyota Camry"
+            >
+
+
+            <label>
+                Year
+            </label>
+
+            <input
+                type="number"
+                placeholder="2026"
+            >
+
+
+            <label>
+                Type
+            </label>
+
+            <select>
+
+                <option>Sedan</option>
+                <option>SUV</option>
+                <option>Truck</option>
+                <option>Van</option>
+
+            </select>
+
+
+            <label>
+                Owner
+            </label>
+
+            <input
+                type="text"
+                placeholder="Owner name"
+            >
+
+        </div>
+
+
+        <div class="modal-footer">
+
+            <button
+                class="cancel"
+                onclick="closeModal()">
+
+                Cancel
+
+            </button>
+
+            <button class="save">
+
+                Save Vehicle
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+    /* ===============================
+       SEARCH VEHICLES
+    =============================== */
+
+    function searchVehicle() {
+
+        let input =
+            document
+            .getElementById("searchInput")
+            .value
+            .toLowerCase();
+
+        let rows =
+            document
+            .querySelectorAll("#vehicleTable tr");
+
+
+        rows.forEach(function(row) {
+
+            let text =
+                row.textContent.toLowerCase();
+
+
+            if (text.includes(input)) {
+
+                row.style.display = "";
+
+            } else {
+
+                row.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+
+    /* ===============================
+       MODAL
+    =============================== */
+
+    function openModal() {
+
+        document
+        .getElementById("vehicleModal")
+        .classList.add("show");
+
+    }
+
+
+    function closeModal() {
+
+        document
+        .getElementById("vehicleModal")
+        .classList.remove("show");
+
+    }
+
+
+</script>
+
+</body>
+</html>
