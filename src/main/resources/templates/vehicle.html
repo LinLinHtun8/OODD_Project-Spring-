@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoServe - Customer Management</title>
 
-    <link rel="stylesheet" href="./css/customer.css">
+    <title>AutoServe - Vehicle Management</title>
+
+    <link rel="stylesheet" href="./css/v.css">
 </head>
 
 <body>
@@ -13,29 +14,46 @@
 <div class="app">
 
     <!-- ================= SIDEBAR ================= -->
-    <aside class="sidebar" id="sidebar">
+
+    <aside class="sidebar">
 
         <!-- Logo -->
         <div class="logo">
 
-            <div class="logo-icon">
-               <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 5H20M8 5C8 6.06087 7.57857 7.07828 6.82843 7.82843C6.07828 8.57857 5.06087 9 4 9C2.93913 9 1.92172 8.57857 1.17157 7.82843C0.421427 7.07828 0 6.06087 0 5M8 5V3C8 2.46957 8.21071 1.96086 8.58579 1.58579C8.96086 1.21071 9.46957 1 10 1H18C18.5304 1 19.0391 1.21071 19.4142 1.58579C19.7893 1.96086 20 2.46957 20 3V5M20 5V15C20 15.5304 19.7893 16.0391 19.4142 16.4142C19.0391 16.7893 18.5304 17 18 17H6C5.46957 17 4.96086 16.7893 4.58579 16.4142C4.21071 16.0391 4 15.5304 4 15V5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+            <div class="logo-box">
+                <svg width="18" height="18"
+                     viewBox="0 0 24 24"
+                     fill="none">
+
+                    <path
+                        d="M6 8H18V18H6V8Z"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"/>
+
+                    <path
+                        d="M9 8V5H15V8"
+                        stroke="white"
+                        stroke-width="1.8"
+                        stroke-linejoin="round"/>
+
+                </svg>
             </div>
 
             <div class="logo-text">
-                <b>AutoServe</b>
+                <strong>AutoServe</strong>
                 <span>Management System</span>
             </div>
+
+            <button class="collapse-btn">‹</button>
 
         </div>
 
 
         <!-- Navigation -->
-        <nav class="navigation">
 
-            <a href="#" class="nav-item">
+        <nav class="navigation">
+                 <a href="#" class="nav-item">
                 <span class="nav-icon">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.5 10L4.16667 8.33333M4.16667 8.33333L10 2.5L15.8333 8.33333M4.16667 8.33333V16.6667C4.16667 16.8877 4.25446 17.0996 4.41074 17.2559C4.56702 17.4122 4.77899 17.5 5 17.5H7.5M15.8333 8.33333L17.5 10M15.8333 8.33333V16.6667C15.8333 16.8877 15.7455 17.0996 15.5893 17.2559C15.433 17.4122 15.221 17.5 15 17.5H12.5M7.5 17.5C7.72101 17.5 7.93298 17.4122 8.08926 17.2559C8.24554 17.0996 8.33333 16.8877 8.33333 16.6667V13.3333C8.33333 13.1123 8.42113 12.9004 8.57741 12.7441C8.73369 12.5878 8.94565 12.5 9.16667 12.5H10.8333C11.0543 12.5 11.2663 12.5878 11.4226 12.7441C11.5789 12.9004 11.6667 13.1123 11.6667 13.3333V16.6667C11.6667 16.8877 11.7545 17.0996 11.9107 17.2559C12.067 17.4122 12.279 17.5 12.5 17.5M7.5 17.5H12.5" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -44,7 +62,7 @@
                 <span class="nav-text">Dashboard</span>
             </a>
 
-            <a href="#" class="nav-item active">
+            <a href="#" class="nav-item ">
                 <span class="nav-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +83,7 @@
                 <span class="nav-dot"></span>
             </a>
 
-            <a href="#" class="nav-item">
+            <a href="#" class="nav-item active">
                 <span class="nav-icon">
                     <svg width="20" height="20" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 5H20M8 5C8 6.06087 7.57857 7.07828 6.82843 7.82843C6.07828 8.57857 5.06087 9 4 9C2.93913 9 1.92172 8.57857 1.17157 7.82843C0.421427 7.07828 0 6.06087 0 5M8 5V3C8 2.46957 8.21071 1.96086 8.58579 1.58579C8.96086 1.21071 9.46957 1 10 1H18C18.5304 1 19.0391 1.21071 19.4142 1.58579C19.7893 1.96086 20 2.46957 20 3V5M20 5V15C20 15.5304 19.7893 16.0391 19.4142 16.4142C19.0391 16.7893 18.5304 17 18 17H6C5.46957 17 4.96086 16.7893 4.58579 16.4142C4.21071 16.0391 4 15.5304 4 15V5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -228,20 +246,21 @@
                 </span>
                 <span class="nav-text">Settings</span>
             </a>
-
+            
         </nav>
 
 
         <!-- User -->
+
         <div class="sidebar-user">
 
-            <div class="user-avatar">
+            <div class="avatar">
                 JD
             </div>
 
             <div class="user-info">
                 <strong>John Davis</strong>
-                <span>Manager</span>
+                <small>Manager</small>
             </div>
 
         </div>
@@ -249,24 +268,31 @@
     </aside>
 
 
+
     <!-- ================= MAIN ================= -->
+
     <main class="main">
 
-        <!-- Header -->
+
+        <!-- HEADER -->
+
         <header class="header">
 
-            <div class="date">
+            <div class="header-title">
 
-                <span>Wednesday, August 13, 2026</span>
+                <span>
+                    Wednesday, August 13, 2026
+                </span>
 
-                <strong>Customer Management</strong>
+                <strong>
+                    Vehicle Management
+                </strong>
 
             </div>
 
 
             <div class="header-right">
 
-                <!-- Search -->
                 <div class="quick-search">
 
                     <span>⌕</span>
@@ -279,21 +305,19 @@
                 </div>
 
 
-                <!-- Notification -->
-                <button class="notification">
-                    🔔
-                    <span></span>
-                </button>
+                <div class="notification">
+                    ♟
+                    <i>4</i>
+                </div>
 
 
-                <!-- User -->
-                <div class="header-user">
+                <div class="profile">
 
-                    <div class="header-avatar">
+                    <div class="avatar">
                         JD
                     </div>
 
-                    <div>
+                    <div class="profile-info">
                         <strong>John Davis</strong>
                         <small>Manager</small>
                     </div>
@@ -305,27 +329,40 @@
         </header>
 
 
+
         <!-- ================= CONTENT ================= -->
+
         <section class="content">
 
-            <!-- Page Title -->
-            <div class="page-header">
+
+            <!-- PAGE TITLE -->
+
+            <div class="page-heading">
 
                 <div>
-                    <h1>Customer Management</h1>
-                    <p>7 total customers</p>
+
+                    <h1>
+                        Vehicle Management
+                    </h1>
+
+                    <p>
+                        7 registered vehicles
+                    </p>
+
                 </div>
 
-                <div class="page-actions">
+
+                <div class="heading-buttons">
 
                     <button class="filter-btn">
                         Filter
                     </button>
 
-                    <button class="add-btn"
-                            onclick="openModal()">
+                    <button
+                        class="add-btn"
+                        onclick="openModal()">
 
-                        + Add Customer
+                        + Add Vehicle
 
                     </button>
 
@@ -334,26 +371,32 @@
             </div>
 
 
-            <!-- Customer Card -->
-            <div class="customer-card">
 
-                <!-- Search -->
-                <div class="table-search">
+            <!-- ================= VEHICLE CARD ================= -->
+
+            <div class="vehicle-card">
+
+
+                <!-- SEARCH -->
+
+                <div class="vehicle-search">
 
                     <span>⌕</span>
 
                     <input
                         type="text"
-                        id="customerSearch"
-                        placeholder="Search by name or email..."
-                        onkeyup="searchCustomers()"
+                        id="searchInput"
+                        placeholder="Search by plate, owner, or brand..."
+                        onkeyup="searchVehicle()"
                     >
 
                 </div>
 
 
-                <!-- Table -->
-                <div class="table-container">
+
+                <!-- TABLE -->
+
+                <div class="table-wrapper">
 
                     <table>
 
@@ -361,12 +404,20 @@
 
                             <tr>
 
-                                <th>CUSTOMER ID</th>
-                                <th>NAME</th>
-                                <th>PHONE</th>
-                                <th>EMAIL</th>
-                                <th>VEHICLES</th>
+                                <th>VEHICLE ID</th>
+
+                                <th>PLATE NO.</th>
+
+                                <th>BRAND & MODEL</th>
+
+                                <th>YEAR</th>
+
+                                <th>TYPE</th>
+
+                                <th>OWNER</th>
+
                                 <th>STATUS</th>
+
                                 <th>ACTIONS</th>
 
                             </tr>
@@ -374,138 +425,283 @@
                         </thead>
 
 
-                        <tbody id="customerTable">
+                        <tbody id="vehicleTable">
+
+
+                            <!-- V-001 -->
 
                             <tr>
-                                <td>C-001</td>
+
+                                <td>V-001</td>
+
+                                <td class="plate">
+                                    ABC&nbsp; 1234
+                                </td>
+
+                                <td class="bold">
+                                    Toyota Camry
+                                </td>
+
+                                <td>2021</td>
+
+                                <td>Sedan</td>
+
                                 <td>Marcus Williams</td>
-                                <td>+1 (555) 234-5678</td>
-                                <td>marcus.w@email.com</td>
-                                <td>2</td>
+
                                 <td>
-                                    <span class="status active-status">
-                                        Active
+                                    <span class="status service">
+                                        In Service
                                     </span>
                                 </td>
+
                                 <td class="actions">
-                                    <button>◉</button>
-                                    <button>✎</button>
-                                    <button class="delete">♧</button>
+
+                                    <button
+                                        title="View">
+                                        ◎
+                                    </button>
+
+                                    <button
+                                        title="Edit">
+                                        ♢
+                                    </button>
+
+                                    <button
+                                        class="delete"
+                                        title="Delete">
+                                        ♧
+                                    </button>
+
                                 </td>
+
                             </tr>
 
 
+
+                            <!-- V-002 -->
+
                             <tr>
-                                <td>C-002</td>
+
+                                <td>V-002</td>
+
+                                <td class="plate">
+                                    XYZ&nbsp; 5678
+                                </td>
+
+                                <td class="bold">
+                                    Honda Civic
+                                </td>
+
+                                <td>2020</td>
+
+                                <td>Sedan</td>
+
                                 <td>Sarah Johnson</td>
-                                <td>+1 (555) 345-6789</td>
-                                <td>sarah.j@email.com</td>
-                                <td>1</td>
+
                                 <td>
-                                    <span class="status active-status">
-                                        Active
+                                    <span class="status completed">
+                                        Completed
                                     </span>
                                 </td>
+
                                 <td class="actions">
-                                    <button>◉</button>
-                                    <button>✎</button>
+
+                                    <button>◎</button>
+                                    <button>♢</button>
                                     <button class="delete">♧</button>
+
                                 </td>
+
                             </tr>
 
 
+
+                            <!-- V-003 -->
+
                             <tr>
-                                <td>C-003</td>
+
+                                <td>V-003</td>
+
+                                <td class="plate">
+                                    LMN&nbsp; 9012
+                                </td>
+
+                                <td class="bold">
+                                    Ford F-150
+                                </td>
+
+                                <td>2019</td>
+
+                                <td>Truck</td>
+
                                 <td>Robert Kim</td>
-                                <td>+1 (555) 456-7890</td>
-                                <td>robert.k@email.com</td>
-                                <td>3</td>
+
                                 <td>
-                                    <span class="status active-status">
-                                        Active
+                                    <span class="status pending">
+                                        Pending
                                     </span>
                                 </td>
+
                                 <td class="actions">
-                                    <button>◉</button>
-                                    <button>✎</button>
+
+                                    <button>◎</button>
+                                    <button>♢</button>
                                     <button class="delete">♧</button>
+
                                 </td>
+
                             </tr>
 
 
+
+                            <!-- V-004 -->
+
                             <tr>
-                                <td>C-004</td>
+
+                                <td>V-004</td>
+
+                                <td class="plate">
+                                    DEF&nbsp; 3456
+                                </td>
+
+                                <td class="bold">
+                                    BMW 3 Series
+                                </td>
+
+                                <td>2022</td>
+
+                                <td>Sedan</td>
+
                                 <td>Emily Chen</td>
-                                <td>+1 (555) 567-8901</td>
-                                <td>emily.c@email.com</td>
-                                <td>1</td>
+
                                 <td>
-                                    <span class="status inactive-status">
-                                        Inactive
+                                    <span class="status completed">
+                                        Completed
                                     </span>
                                 </td>
+
                                 <td class="actions">
-                                    <button>◉</button>
-                                    <button>✎</button>
+
+                                    <button>◎</button>
+                                    <button>♢</button>
                                     <button class="delete">♧</button>
+
                                 </td>
+
                             </tr>
 
 
+
+                            <!-- V-005 -->
+
                             <tr>
-                                <td>C-005</td>
+
+                                <td>V-005</td>
+
+                                <td class="plate">
+                                    GHI&nbsp; 7890
+                                </td>
+
+                                <td class="bold">
+                                    Chevrolet Malibu
+                                </td>
+
+                                <td>2018</td>
+
+                                <td>Sedan</td>
+
                                 <td>David Thompson</td>
-                                <td>+1 (555) 678-9012</td>
-                                <td>david.t@email.com</td>
-                                <td>2</td>
+
                                 <td>
-                                    <span class="status active-status">
-                                        Active
+                                    <span class="status service">
+                                        In Service
                                     </span>
                                 </td>
+
                                 <td class="actions">
-                                    <button>◉</button>
-                                    <button>✎</button>
+
+                                    <button>◎</button>
+                                    <button>♢</button>
                                     <button class="delete">♧</button>
+
                                 </td>
+
                             </tr>
 
 
+
+                            <!-- V-006 -->
+
                             <tr>
-                                <td>C-006</td>
+
+                                <td>V-006</td>
+
+                                <td class="plate">
+                                    JKL&nbsp; 1234
+                                </td>
+
+                                <td class="bold">
+                                    Nissan Altima
+                                </td>
+
+                                <td>2023</td>
+
+                                <td>Sedan</td>
+
                                 <td>Lisa Martinez</td>
-                                <td>+1 (555) 789-0123</td>
-                                <td>lisa.m@email.com</td>
-                                <td>1</td>
+
                                 <td>
-                                    <span class="status active-status">
-                                        Active
+                                    <span class="status pending">
+                                        Pending
                                     </span>
                                 </td>
+
                                 <td class="actions">
-                                    <button>◉</button>
-                                    <button>✎</button>
+
+                                    <button>◎</button>
+                                    <button>♢</button>
                                     <button class="delete">♧</button>
+
                                 </td>
+
                             </tr>
 
 
+
+                            <!-- V-007 -->
+
                             <tr>
-                                <td>C-007</td>
+
+                                <td>V-007</td>
+
+                                <td class="plate">
+                                    MNO&nbsp; 5678
+                                </td>
+
+                                <td class="bold">
+                                    Hyundai Tucson
+                                </td>
+
+                                <td>2021</td>
+
+                                <td>SUV</td>
+
                                 <td>James Wilson</td>
-                                <td>+1 (555) 890-1234</td>
-                                <td>james.w@email.com</td>
-                                <td>4</td>
+
                                 <td>
-                                    <span class="status active-status">
-                                        Active
+                                    <span class="status completed">
+                                        Completed
                                     </span>
                                 </td>
+
                                 <td class="actions">
-                                    <button>◉</button>
-                                    <button>✎</button>
+
+                                    <button>◎</button>
+                                    <button>♢</button>
                                     <button class="delete">♧</button>
+
                                 </td>
+
                             </tr>
 
                         </tbody>
@@ -515,20 +711,14 @@
                 </div>
 
 
-                <!-- Footer -->
+
+                <!-- TABLE FOOTER -->
+
                 <div class="table-footer">
 
                     <span>
-                        Showing 7 of 7 customers
+                        Showing 7 of 7 vehicles
                     </span>
-
-                    <div class="pagination">
-
-                        <button class="page-active">1</button>
-                        <button>2</button>
-                        <button>3</button>
-
-                    </div>
 
                 </div>
 
@@ -541,46 +731,98 @@
 </div>
 
 
-<!-- ================= ADD CUSTOMER MODAL ================= -->
 
-<div class="modal" id="customerModal">
+<!-- ================= ADD VEHICLE MODAL ================= -->
+
+<div class="modal" id="vehicleModal">
 
     <div class="modal-box">
 
         <div class="modal-header">
 
-            <h2>Add Customer</h2>
+            <h2>
+                Add Vehicle
+            </h2>
 
-            <button onclick="closeModal()">×</button>
+            <button onclick="closeModal()">
+                ×
+            </button>
 
         </div>
 
 
         <div class="modal-body">
 
-            <label>Name</label>
-            <input type="text" placeholder="Customer name">
+            <label>
+                Plate Number
+            </label>
+
+            <input
+                type="text"
+                placeholder="ABC 1234"
+            >
 
 
-            <label>Phone</label>
-            <input type="text" placeholder="Phone number">
+            <label>
+                Brand & Model
+            </label>
+
+            <input
+                type="text"
+                placeholder="Toyota Camry"
+            >
 
 
-            <label>Email</label>
-            <input type="email" placeholder="Email address">
+            <label>
+                Year
+            </label>
+
+            <input
+                type="number"
+                placeholder="2026"
+            >
+
+
+            <label>
+                Type
+            </label>
+
+            <select>
+
+                <option>Sedan</option>
+                <option>SUV</option>
+                <option>Truck</option>
+                <option>Van</option>
+
+            </select>
+
+
+            <label>
+                Owner
+            </label>
+
+            <input
+                type="text"
+                placeholder="Owner name"
+            >
 
         </div>
 
 
         <div class="modal-footer">
 
-            <button class="cancel-btn"
-                    onclick="closeModal()">
+            <button
+                class="cancel"
+                onclick="closeModal()">
+
                 Cancel
+
             </button>
 
-            <button class="save-btn">
-                Save Customer
+            <button class="save">
+
+                Save Vehicle
+
             </button>
 
         </div>
@@ -590,58 +832,69 @@
 </div>
 
 
+
 <script>
 
-function openModal() {
+    /* ===============================
+       SEARCH VEHICLES
+    =============================== */
 
-    document
-        .getElementById("customerModal")
+    function searchVehicle() {
+
+        let input =
+            document
+            .getElementById("searchInput")
+            .value
+            .toLowerCase();
+
+        let rows =
+            document
+            .querySelectorAll("#vehicleTable tr");
+
+
+        rows.forEach(function(row) {
+
+            let text =
+                row.textContent.toLowerCase();
+
+
+            if (text.includes(input)) {
+
+                row.style.display = "";
+
+            } else {
+
+                row.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+
+    /* ===============================
+       MODAL
+    =============================== */
+
+    function openModal() {
+
+        document
+        .getElementById("vehicleModal")
         .classList.add("show");
 
-}
+    }
 
 
-function closeModal() {
+    function closeModal() {
 
-    document
-        .getElementById("customerModal")
+        document
+        .getElementById("vehicleModal")
         .classList.remove("show");
 
-}
+    }
 
-
-/* Search Customer */
-
-function searchCustomers() {
-
-    const input =
-        document
-        .getElementById("customerSearch")
-        .value
-        .toLowerCase();
-
-    const rows =
-        document
-        .querySelectorAll("#customerTable tr");
-
-    rows.forEach(function(row) {
-
-        const text =
-            row.textContent.toLowerCase();
-
-        if (text.includes(input)) {
-
-            row.style.display = "";
-
-        } else {
-
-            row.style.display = "none";
-
-        }
-
-    });
-
-}
 
 </script>
 
