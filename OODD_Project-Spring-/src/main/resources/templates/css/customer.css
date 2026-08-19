@@ -1,0 +1,928 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #101010;
+
+    color: #1d2d45;
+}
+
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    background: #eef3f8;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    width: 138px;
+    min-height: 100vh;
+
+    background: #102b57;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+}
+
+
+/* Logo */
+
+.logo {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px;
+}
+
+
+.logo-icon {
+    width: 25px;
+    height: 25px;
+
+    background: #2476f5;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+
+    white-space: nowrap;
+}
+
+
+.logo-text b {
+    font-size: 8px;
+}
+
+
+.logo-text span {
+    font-size: 5px;
+
+    color: #9eb2cf;
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    padding: 8px 6px;
+}
+
+
+.nav-item {
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 8px;
+
+    color: #b9c9df;
+
+    text-decoration: none;
+
+    border-radius: 3px;
+
+    position: relative;
+}
+
+
+.nav-item:hover {
+    background: #183968;
+}
+
+
+.nav-item.active {
+    background: #2168f5;
+
+    color: white;
+}
+
+
+.nav-icon {
+    width: 15px;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+.nav-text {
+    font-size: 7px;
+
+    white-space: nowrap;
+}
+
+
+.nav-dot {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    margin-left: auto;
+}
+
+
+/* Sidebar User */
+
+.sidebar-user {
+    margin-top: auto;
+
+    padding: 10px;
+
+    border-top: 1px solid #203d66;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.user-avatar,
+.header-avatar {
+    width: 22px;
+    height: 22px;
+
+    background: #2877f5;
+
+    border-radius: 50%;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 7px;
+
+    flex-shrink: 0;
+}
+
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.user-info strong {
+    font-size: 7px;
+}
+
+
+.user-info span {
+    font-size: 5px;
+
+    color: #9eb2cf;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+.main {
+    flex: 1;
+    
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    height: 50px;
+
+    background: white;
+
+    border-bottom: 1px solid #dfe6ee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 18px;
+}
+
+
+.date {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.date span {
+    font-size: 6px;
+
+    color: #8795a8;
+}
+
+
+.date strong {
+    font-size: 8px;
+
+    color: #20324c;
+}
+
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+/* Quick Search */
+
+.quick-search {
+    width: 115px;
+    height: 23px;
+
+    border: 1px solid #e0e6ed;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 0 7px;
+}
+
+
+.quick-search span {
+    color: #a5b0bf;
+
+    font-size: 11px;
+}
+
+
+.quick-search input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 6px;
+
+    color: #596b82;
+}
+
+
+/* Notification */
+
+.notification {
+    border: none;
+
+    background: transparent;
+
+    position: relative;
+
+    cursor: pointer;
+
+    font-size: 10px;
+}
+
+
+.notification span {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #ff3c30;
+
+    right: -1px;
+    top: 0;
+}
+
+
+/* Header User */
+
+.header-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.header-user strong {
+    display: block;
+
+    font-size: 7px;
+}
+
+
+.header-user small {
+    display: block;
+
+    font-size: 5px;
+
+    color: #8a98aa;
+}
+
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.content {
+    padding: 15px;
+
+    flex: 1;
+}
+
+
+/* Page Header */
+
+.page-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+
+.page-header h1 {
+    font-size: 15px;
+
+    color: #1c2d45;
+
+    margin-bottom: 4px;
+}
+
+
+.page-header p {
+    font-size: 7px;
+
+    color: #8090a4;
+}
+
+
+.page-actions {
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.filter-btn,
+.add-btn {
+    height: 22px;
+
+    padding: 0 10px;
+
+    border-radius: 4px;
+
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+
+.filter-btn {
+    background: white;
+
+    border: 1px solid #dbe3eb;
+
+    color: #596b81;
+}
+
+
+.add-btn {
+    border: none;
+
+    background: #2167f3;
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   CUSTOMER CARD
+======================================== */
+
+.customer-card {
+    background: white;
+
+    border: 1px solid #dfe6ee;
+
+    border-radius: 7px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+
+    overflow: hidden;
+}
+
+
+/* Search */
+
+.table-search {
+    width: 160px;
+    height: 25px;
+
+    margin: 10px;
+
+    border: 1px solid #e2e8ef;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 0 8px;
+}
+
+
+.table-search span {
+    color: #9aa8b9;
+
+    font-size: 10px;
+}
+
+
+.table-search input {
+    border: none;
+
+    outline: none;
+
+    width: 100%;
+
+    font-size: 7px;
+
+    color: #4d6078;
+}
+
+
+.table-search input::placeholder {
+    color: #aab5c4;
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: auto;
+}
+
+
+thead {
+    background: #f7f9fb;
+}
+
+
+th {
+    height: 31px;
+
+    padding: 0 8px;
+
+    text-align: left;
+
+    font-size: 6px;
+
+    font-weight: 700;
+
+    color: #60738d;
+
+    white-space: nowrap;
+}
+
+
+td {
+    height: 35px;
+
+    padding: 0 8px;
+
+    border-top: 1px solid #edf1f5;
+
+    font-size: 6.5px;
+
+    color: #4c607a;
+
+    white-space: nowrap;
+}
+
+
+tbody tr:hover {
+    background: #f9fbfd;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 37px;
+
+    height: 16px;
+
+    padding: 0 6px;
+
+    border-radius: 10px;
+
+    font-size: 5.5px;
+
+    font-weight: 600;
+}
+
+
+.active-status {
+    background: #d9f8e5;
+
+    color: #1d9b50;
+}
+
+
+.inactive-status {
+    background: #edf1f5;
+
+    color: #607086;
+}
+
+
+/* ========================================
+   ACTIONS
+======================================== */
+
+.actions {
+    display: flex;
+
+    gap: 5px;
+
+    align-items: center;
+}
+
+
+.actions button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 8px;
+
+    color: #6682a8;
+}
+
+
+.actions button:hover {
+    color: #2167f3;
+}
+
+
+.actions .delete {
+    color: #ff5757;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.table-footer {
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 10px;
+
+    border-top: 1px solid #edf1f5;
+}
+
+
+.table-footer > span {
+    font-size: 6px;
+
+    color: #8998aa;
+}
+
+
+.pagination {
+    display: flex;
+
+    gap: 3px;
+}
+
+
+.pagination button {
+    width: 18px;
+    height: 18px;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 3px;
+
+    font-size: 6px;
+
+    color: #60718a;
+
+    cursor: pointer;
+}
+
+
+.pagination .page-active {
+    background: #2167f3;
+
+    color: white;
+}
+
+
+/* ========================================
+   MODAL
+======================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(12, 30, 55, 0.45);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 100;
+}
+
+
+.modal.show {
+    display: flex;
+}
+
+
+.modal-box {
+    width: 320px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+
+.modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+
+.modal-header h2 {
+    font-size: 14px;
+}
+
+
+.modal-header button {
+    border: none;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    color: #718096;
+}
+
+
+.modal-body {
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.modal-body label {
+    font-size: 8px;
+
+    font-weight: 600;
+
+    color: #52657d;
+}
+
+
+.modal-body input {
+    height: 28px;
+
+    border: 1px solid #dce4ec;
+
+    border-radius: 5px;
+
+    padding: 0 8px;
+
+    outline: none;
+
+    margin-bottom: 8px;
+
+    font-size: 8px;
+}
+
+
+.modal-footer {
+    padding: 12px 15px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    border-top: 1px solid #edf1f5;
+}
+
+
+.cancel-btn,
+.save-btn {
+    height: 27px;
+
+    padding: 0 12px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 8px;
+}
+
+
+.cancel-btn {
+    background: white;
+
+    border: 1px solid #dbe2ea;
+
+    color: #617189;
+}
+
+
+.save-btn {
+    background: #2167f3;
+
+    color: white;
+
+    border: none;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+        width: 120px;
+    }
+
+    .header-user div:last-child {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        width: 55px;
+    }
+
+    .logo-text,
+    .nav-text,
+    .user-info {
+        display: none;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .nav-item {
+        justify-content: center;
+    }
+
+    .nav-dot {
+        display: none;
+    }
+
+    .quick-search {
+        width: 80px;
+    }
+
+}
