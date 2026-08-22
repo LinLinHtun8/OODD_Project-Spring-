@@ -624,7 +624,49 @@ body {
 
     padding: 20px 12px;
 }
+/* =====================================
+   SIDEBAR
+===================================== */
+.sidebar {
+    width: 230px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
 
+/* Mouse မထိထားတဲ့အချိန် */
+.sidebar .logo-text,
+.sidebar .nav-item span {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s;
+}
+
+/* Mouse Sidebar ပေါ်ရောက်တဲ့အချိန် ချုံ့ */
+.sidebar:hover {
+    width: 65px;
+}
+
+/* Logo စာဖျောက် */
+.sidebar:hover .logo-text {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Menu စာဖျောက် */
+.sidebar:hover span{
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Logo icon အလယ် */
+.sidebar:hover .logo {
+    justify-content: center;
+}
+
+/* Icon တွေ အလယ် */
+.sidebar:hover .nav-item   {
+    justify-content: center;
+}
 .logo {
     display: flex;
     align-items: center;
@@ -979,7 +1021,7 @@ body {
 
 .stat-icon.purple {
     background: #f4edff;
-    color: #8b51e8;
+    color: #9810FA;
 }
 
 .stat-icon.orange {
